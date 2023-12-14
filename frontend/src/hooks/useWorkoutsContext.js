@@ -4,7 +4,8 @@ import { useContext } from 'react'
 export const useWorkoutsContext = () => {
     const context = useContext(WorkoutsContext)
 
-    
+    if(!context)
+        throw new Error('Error!')
 
     return context
-}
+}    

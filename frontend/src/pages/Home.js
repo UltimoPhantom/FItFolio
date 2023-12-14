@@ -12,13 +12,13 @@ const Home = () => {
 
     useEffect(() => {
         const fetchWorkout = async() => {
-             const response = await fetch('/api/workouts')
-             const json = await response.json()
+            const response = await fetch('/api/workouts')
+            const json = await response.json()
 
-             if(response.ok) {
+            if(response.ok) {
                     // setWorkouts(json)
                     dispatch({type:'SET_WORKOUTS',payload: json})
-             }
+            }
             
         }
         fetchWorkout();
@@ -30,7 +30,7 @@ const Home = () => {
             <div className="workouts">
                 {workouts && workouts.map((workout) => (
                     // <p key={workout._id}>{workout.title}</p>
-                    <WorkoutDetails key={workout._id} workout={workout} />
+                    <WorkoutDetails workout={workout} key={workout._id}  />
                 ))}
             </div>
             <WorkoutForm />
