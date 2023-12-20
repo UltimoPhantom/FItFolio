@@ -43,19 +43,19 @@ userSchema.statics.signup = async function (email, password) {
 }
 
 //Login static method
-userSchema.static.login = async function(email, password) {
-    if(!email || !password)
-        throw Error('Email or Password is empty!')
-    
-    const user = await this.findOne({ email })
-    if(!user)
-        throw Error('Email dosen\'t exist!')
+    userSchema.statics.login = async function(email, password) {
+        if(!email || !password)
+            throw Error('Email or Password is empty!')
+        
+        const user = await this.findOne({ email })
+        if(!user)
+            throw Error('Email dosen\'t exist!')
 
-    const isMatch = bcrypt.compare(password, exist.password)
-    if(!isMatch)
-        throw Error('Incorrect Password!')
-    
-    return user
-}
+        const isMatch = await bcrypt.compare(password, user.password)
+        if(!isMatch)
+            throw Error('Incorrect Password!')
+
+        return user
+    }
 
 module.exports = mongoose.model('User', userSchema)
