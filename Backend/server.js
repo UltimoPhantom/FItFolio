@@ -4,7 +4,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 
 const workoutRoutes = require('./routes/workout')
-const userRoutes = require('./controllers/userController')
+const userRoutes = require('./routes/user')
 
 const app = express()
 
