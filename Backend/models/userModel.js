@@ -19,8 +19,6 @@ const userSchema = new Schema ({
 userSchema.statics.signup = async function (email, password) {
 
     //VAlidating EMail and password
-    if(!email || !password)
-        throw Error('Email or Password is empty')
     if(!validator.isEmail(email)) 
         throw Error('Invalid Email!')    
     if(!validator.isStrongPassword(password))
@@ -41,6 +39,22 @@ userSchema.statics.signup = async function (email, password) {
     console.log("Hash value: ",hash)
 
     const user = await this.create({ email, password: hash })    
+    return user
+}
+
+//Login static method
+userSchema.static.login = async function(email, password) {
+    if(!email || !password)
+        throw Error('Email or Password is empty!')
+    
+    const user = await this.findOne({ email })
+    if(!user)
+        throw Error('Email dosen\'t exist!')
+
+    const isMatch = bcrypt.compare(password, exist.password)
+    if(!isMatch)
+        throw Error('Incorrect Password!')
+    
     return user
 }
 
