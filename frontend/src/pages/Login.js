@@ -16,6 +16,7 @@ function Login() {
 		setPassword('')
 		alert("working!")
 	};
+
 	const handleLogin = async (e) => {
 		e.preventDefault();
 		console.log(email, password)
@@ -58,6 +59,7 @@ function Login() {
 						<button className='buttonStlye'>Login</button>
 					</form>
 				</div>
+
 			</div>
 		</div>
 	);
