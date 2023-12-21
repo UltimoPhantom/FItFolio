@@ -27,35 +27,39 @@ function Login() {
 
 
 	return (
-		<div className="main">
-			<input type="checkbox" id="chk" aria-hidden="true" />
+		<div className='bbody'>
 
-			<div className="signup">
-				<form  onSubmit={handleSignup}>
-					<label htmlFor="chk" aria-hidden="true">Sign up</label>
-					<input type="email" name="email" placeholder="Email" value={email}
-						onChange={(e) => setEmail(e.target.value)}
-					/>
-					<input type="password" name="pswd" placeholder="Password" value={password}
+			<div className="mmain">
+				<input type="checkbox" id="chk" aria-hidden="true" />
+
+				<div className="signup">
+					<form onSubmit={handleSignup}>
+						<label className='labelStyle' htmlFor="chk" aria-hidden="true">Sign up</label>
+						<input className='inputStyle' type="email" name="email" placeholder="Email" value={email}
+							onChange={(e) => setEmail(e.target.value)}
+						/>
+						<input className='inputStyle' type="password" name="pswd" placeholder="Password" value={password}
 							onChange={(e) => setPassword(e.target.value)}
-					/>
-					<button className='loginButtons'>Sign up</button>
-				</form>
-			</div>
+						/>
+						<button className='buttonStlye'>Sign up</button>
+					</form>
+				</div>
 
 
 
-			<div className="login">
-				<form  onSubmit={handleLogin}>
-					<label htmlFor="chk" aria-hidden="true">Login</label>
-					<input type="email" name="email" placeholder="Email" value={email}
-						onChange={(e) => setEmail(e.target.value)}
-					/>
-					<input type="password" name="pswd" placeholder="Password" value={password}
+				<div className="login">
+					<form onSubmit={handleLogin}>
+						<label className='labelStyle' htmlFor="chk" aria-hidden="true">Login</label>
+						<input className='inputStyle' type="email" name="email" placeholder="Email" value={email}
+							onChange={(e) => setEmail(e.target.value)}
+						/>
+						<input className='inputStyle' type="password" name="pswd" placeholder="Password" value={password}
 							onChange={(e) => setPassword(e.target.value)}
-					/>
-					<button className='loginButtons'>Login</button>
-				</form>
+						/>
+						<button className='buttonStlye'>Login</button>
+					</form>
+				</div>
+
 			</div>
 		</div>
 	);

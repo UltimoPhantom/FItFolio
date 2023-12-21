@@ -1,24 +1,26 @@
 /* Login.css */
-body {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  font-family: 'Jost', sans-serif;
-  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
-}
 
-.main {
-  width: 350px;
-  height: 500px;
-  /* background: red; Remove this line */
-  overflow: hidden;
-  background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
-  border-radius: 10px;
-  box-shadow: 5px 20px 50px #000;
-}
+.bbody {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Jost', sans-serif;
+    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+  }
+  
+  .mmain {
+    width: 350px;
+    height: 500px;
+    background: red;
+    overflow: hidden;
+    background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px #000;
+  }
+  
   #chk {
     display: none;
   }
@@ -29,7 +31,7 @@ body {
     height: 100%;
   }
   
-  label {
+  .labelStyle {
     color: #fff;
     font-size: 2.3em;
     justify-content: center;
@@ -40,8 +42,8 @@ body {
     transition: .5s ease-in-out;
   }
   
-  input {
-    width: 70%;
+  .inputStyle {
+    width: 60%;
     height: 20px;
     background: #e0dede;
     justify-content: center;
@@ -53,7 +55,7 @@ body {
     border-radius: 5px;
   }
   
-  button {
+  .buttonStlye {
     width: 60%;
     height: 40px;
     margin: 10px auto;
@@ -71,7 +73,7 @@ body {
     cursor: pointer;
   }
   
-  button:hover {
+  .buttonStlye:hover {
     background: #6d44b8;
   }
   
