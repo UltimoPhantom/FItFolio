@@ -4,12 +4,14 @@ import React from 'react';
 import './Login.css'; // Make sure to import your CSS file
 import { useState } from 'react';
 import { useSignup } from '../hooks/useSignup'
+import { useLogin } from '../hooks/useLogin';
 
 function Login() {
 
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const { signup, error, isLoading } = useSignup()
+	const { login, error2, isLoading2 } = useLogin()
 
 	const handleSignup = async (e) => {
 		e.preventDefault();
@@ -25,11 +27,13 @@ function Login() {
 
 	const handleLogin = async (e) => {
 		e.preventDefault();
+		await login(email, password)
+
 		console.log(email, password)
 		setEmail('')
 		setPassword('')
-		if(error)
-			alert(error)		
+		if(error2)
+			alert(error2)		
 	};
 
 
@@ -63,7 +67,7 @@ function Login() {
 						<input className='inputStyle' type="password" name="pswd" placeholder="Password" value={password}
 							onChange={(e) => setPassword(e.target.value)}
 						/>
-						<button className='buttonStlye'>Login</button>
+						<button className='buttonStlye' disabled={isLoading2}>Login</button>
 					</form>
 				</div>
 			</div>
