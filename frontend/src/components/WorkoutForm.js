@@ -51,6 +51,7 @@ const WorkoutForm = () => {
             borderRadius: '8px',
             maxHeight: '400px', // Set the maximum height
             overflowY: 'auto', // Enable vertical scrolling if needed
+            marginRight: '20px'
           }}
         >
           <h3 style={{ color: '#e1edec' }}>Add a new Workout</h3>

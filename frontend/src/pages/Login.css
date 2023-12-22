@@ -120,3 +120,8 @@
       cursor: pointer;
   }
   
+  .error {
+    color: chartreuse;
+    order: 1; /* Set the order property to 1 to position it after .loginButtons */
+    margin-top: 10px; /* Add some margin to separate it from the previous element */
+}

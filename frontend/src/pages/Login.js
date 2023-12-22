@@ -19,8 +19,8 @@ function Login() {
 		console.log(email, password)
 		setEmail('')
 		setPassword('')
-		alert("working!")
-
+		if(error)
+			alert(error)		
 	};
 
 	const handleLogin = async (e) => {
@@ -28,7 +28,8 @@ function Login() {
 		console.log(email, password)
 		setEmail('')
 		setPassword('')
-		alert("working!")
+		if(error)
+			alert(error)		
 	};
 
 
@@ -65,7 +66,6 @@ function Login() {
 						<button className='buttonStlye'>Login</button>
 					</form>
 				</div>
-			{error && <div>{error}</div>}
 			</div>
 		</div>
 	);
