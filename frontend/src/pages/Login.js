@@ -21,8 +21,11 @@ function Login() {
 		console.log(email, password)
 		setEmail('')
 		setPassword('')
-		if(error)
+		if(error) {
+			console.log(error);
 			alert(error)		
+		}
+		
 	};
 
 	const handleLogin = async (e) => {
@@ -32,8 +35,11 @@ function Login() {
 		console.log(email, password)
 		setEmail('')
 		setPassword('')
-		if(error2)
+
+		if(error2) {
+			console.log(error2);
 			alert(error2)		
+		}
 	};
 
 
