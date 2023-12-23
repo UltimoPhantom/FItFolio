@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useWorkoutsContext } from "../hooks/useWorkoutsContext";
+import { useAuthContext } from '../hooks/useAuthContext'
 
 //Components
 import WorkoutDetails from "../components/WorkoutDetails";
@@ -22,7 +23,7 @@ const Home = () => {
             
         }
         fetchWorkout();
-    }, [])
+    }, [dispatch])
 
     return(
         <div className="home">
